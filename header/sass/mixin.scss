@@ -1,0 +1,145 @@
+@mixin generator($classname, $max) {
+
+    @for $classname from 1 through $max {
+
+        .#{$classname} {
+            @content
+        }
+
+    }
+
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint=='desktop' {
+        @media all and (min-width: $large) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint=='medium' {
+        @media all and (min-width: $medium) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint=='small' {
+        @media all and (max-width: $small) {
+            @content;
+        }
+    }
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.customize-area {
+    width: 100%;
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+
+    .bike-type {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: $main;
+
+        ul {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            border: solid white 1px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        li {
+            width: 33%;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    .bike-background {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        label {
+            margin-left: 10px;
+        }
+
+        span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .place-1 {
+            background-color: $main;
+        }
+
+        .place-2 {
+            background-color: $sub;
+        }
+
+        .place-3 {
+            background-color: #afa;
+        }
+
+        .place-4 {
+            background-color: #faf;
+        }
+    }
+
+    .bike-show {
+        margin-top: 10px;
+        display: flex;
+
+    }
+
+    .picture-area {
+        width: 60%;
+    }
+
+    .bike-selector {
+        width: 40%;
+
+        .option {
+            outline: solid 3px $sub;
+            text-align: center;
+            color: $sub;
+        }
+
+        .option-part {
+            display: flex;
+
+        }
+
+        .icon {
+            width: 55px;
+            height: 50px;
+            background-image: url(../images/part.png);
+            background-repeat: no-repeat;
+        }
+
+        .icon-1 {
+            background-position: 0 0;
+        }
+
+        .icon-2 {
+            background-position: -55px 0;
+        }
+
+        .icon-3 {
+            background-position: -111px 0;
+        }
+    }
+
+}
+
+//wrapper

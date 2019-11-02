@@ -1,0 +1,40 @@
+*{
+    /* QA1 想說上面跟首頁都用col 所以下面這邊包row 這邊包container會不會很怪 */
+    /* QA2 inner圖片怎麼處理比較好 */
+    /* QA3 !! 要怎麼貼齊百分百 inbk 設成百分比會有間距 要怎麼治中 */
+    /* QA RWD條件篩選要另外做嗎 from包 fildeset lable代替按鈕 */
+    /* QA 卡片圖片為例 col排版 FLEX父層是不是要給高度才行 不然沒得分配 不然就用padding margin */
+
+    
+    display: inline-block;
+    /* 不能margin: 0 auto; */
+    /* 還有會縮起來 */
+
+    /* posi 蓋掉 flex 問題 & 不能上下對分 */
+    /* 問bais 用處 */
+
+    /* 為什我的div無法撐起高度 */
+    
+    /* 為什麼這邊inline block text右移無效 */
+    .input-group{
+        display: inline-block;
+        text-align: right;
+        span{
+            // display: inline-block;
+            
+        }
+
+        .counter{
+            // text-align: right;
+        }
+    }
+
+    /* 發現inline block margin auto無法治中 */
+    /* 同個東西 float會蓋掉position */
+    /* 然後float: right;的東西 也會縮 用display: inline-block;會被警告無效 */
+}
+
+/* 問圖片哪裡找 */
+
+/* 與 flex 的神搭配 - margin
+雖然 flex 提供很多對齊方式，不過這些對齊通常是在某種”定律”之下，可能彼此距離相等或者周圍的邊距相等之類的，如果想排出其中一欄離大家很遠，或是彼此之間距離不一的版型，其實可以依靠margin這個屬性來幫忙。雖然元素變成 flex 性質的物件，但依然保有 box-model 的特性喔!所以一般 margin 使用方式用在它身上也是可以通的。其中特別的是，如果元素設定成 margin-[left/right]:auto; 的話，該元素就會往反方向推擠直到父容器邊距。 */

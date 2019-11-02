@@ -1,0 +1,299 @@
+@import "rwd";
+@import "rest";
+@import "var";
+@import "style";
+@import "mixin";
+
+
+*{
+    // outline: rgb(231, 211, 207) solid .5px;
+    
+}
+
+
+
+body{
+    min-height: 100vh;
+    font-family: "微軟正黑體";
+    font-size: 1.4rem;
+    // font-weight: 600;
+    line-height: 0.8rem;
+    background-color: #F4F5F7;
+    letter-spacing: .3px;
+    
+}
+
+.wrapper.act-inner{
+    padding-top: 50px;
+    width: 100%;
+    max-width: 980px;
+    background-color: #fff;
+}
+
+.post-bg{
+    // height: 400px;
+    width:100%;
+    padding-bottom: 80%;
+    background-image: url(../images/act_inner_image/post-bg-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// ==================活動資訊========================
+
+.act-info>div,.title{
+    box-sizing: border-box;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.act-info{
+
+    .organizer{
+        display: inline-flex;
+        align-items: center;
+        padding: 1px 0;
+        .name{
+            font-size: 1.2rem;
+            margin-left: .8rem;
+        }
+    }
+
+    .avatar{
+        // display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid $main;
+        box-shadow: 0 0 2px rgba(0,0,0,0.24);
+
+         img{
+             width: 100%;
+             height: 100%;
+             object-position: 50% 50%;
+             object-fit: cover;
+         }
+    }
+
+
+    .title{
+        text-align: center;
+        padding: 25px 0;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $blue-deep;
+    }
+
+    .act-time{
+        font-size: .9rem;
+
+    }
+
+    .last-time{
+        font-size: .6rem;
+        padding: 4px 0;
+        font-weight: 600;
+        color: rgb(177, 173, 173);
+    }
+
+    .depart-pos{
+        font-size: 1rem;
+        color: rgb(117, 112, 112);
+    }
+
+    .submit{
+        display: block;
+        width: 200px;
+        height: 40px;
+        font-size: .8rem;
+        margin-top: 60px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: 600;
+        border:0;
+        background-color: $main;
+
+    }
+}
+
+
+
+
+// =========================================
+.intro-row{
+    width: calc(100% - 20px);
+    max-width: 800px;
+    margin: 60px auto 40px;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+
+    .block{
+        display: inline-block;
+        width: 32%;
+        
+        border-right: 1px solid #ccc;
+
+        .sub-title{
+            font-size: 1rem;
+            text-align: center;
+            padding: 10px 0;
+            color: #999;
+
+            &+div{
+                padding: 20px 0;
+                font-size: 1.6rem;
+                text-align: center;
+                
+            }
+        }
+        
+    }
+    
+}
+
+.group{
+
+    margin-bottom: 5%;
+
+    .title{
+        padding: 10px 0;
+        text-align: left;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        // font-size: 20px;
+    }
+    .avatar{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid $main;
+        box-shadow: 0 0 2px rgba(0,0,0,0.24);
+
+         img{
+             width: 100%;
+             height: 100%;
+             object-position: 50% 50%;
+             object-fit: cover;
+         }
+    }
+
+}
+
+.act-desc{
+
+    .title{
+        display: inline-block;
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: 600;       
+        text-shadow: 0 2px 4px rgba(0,0,0,.3);
+        position: relative;
+        z-index: 10;
+
+        &::after{
+            content:'';
+            // display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index:-1;
+            width: 100%;
+            height: 10px;
+            background-color: $main;
+        }
+    }
+    .txt{
+        padding: 20px;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+    }
+}
+
+
+.comment{
+
+    .title{
+        text-align: left;
+    }
+    textarea{
+        display: block;
+        width: 100%;
+        height: 100px;
+        // min-width: 400px;
+        padding: 10px 0 0 10px;
+        box-sizing: border-box;
+        border: 1px solid #ffd934;
+        border-radius: 4px;
+        resize: none;
+
+        @include phone(){
+            display: block;
+            width: 100%;
+            
+            
+        }
+    }
+
+    .input{
+        @include phone{
+            // width: 100%;
+            // padding-right: 20px;
+        }
+    }
+
+    .input-group{
+        overflow: hidden;
+
+        .counter{
+            display: block;
+            padding: 5px;
+            float: right;
+        }
+        // ??
+        // display: inline-block;
+        // text-align: right;
+        // span{
+        //     // display: inline-block;
+            
+        // }
+
+        // .counter{
+        //     // text-align: right;
+        // }
+    }
+
+    .send{
+        // display: inline-block;
+        float: right;
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        font-size: .8rem;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: 600;
+        border:0;
+        background-color: $main;
+
+        @include phone(){
+            width: 100%;
+        }
+    }
+
+    .counter{
+        font-size: 10px;
+
+    }
+}
