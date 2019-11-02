@@ -29,8 +29,6 @@ body {
 
 .banner {
     // 測試
-
-
     // FIX 不要蓋過去
     margin-top: 3px;
     width: 100%;
@@ -347,7 +345,7 @@ body {
        
     }
 
-    // ??QA
+    // ??QA .txt要吃到高度百分比 intro txt寬度
     .post-intro{
         padding: 10px;
         // height: 150px;
